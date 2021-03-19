@@ -37,6 +37,9 @@ class Audio(models.Model):
 
 class Song(Audio):
     
+    class Meta:
+        ordering = ['id']
+
     def __str__(self):
         return self.name
 
@@ -44,14 +47,18 @@ class Podcast(Audio):
     host = models.CharField(max_length=100)
     participants = models.JSONField(null=True)
 
+    class Meta:
+        ordering = ['id']
+
     def __str__(self):
         return self.name
-
-    
 
 class Audiobook(Audio):
     author = models.CharField(max_length=100)
     narrator = models.CharField(max_length=100)
+
+    class Meta:
+        ordering = ['id']
 
     def __str__(self):
         return self.name
