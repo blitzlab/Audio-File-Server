@@ -1,1 +1,1 @@
-audioFileType = 'Song', 'Podcast', 'Audiobook'
+audioFileType = 'song', 'podcast', 'audiobook'
